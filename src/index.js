@@ -1,4 +1,4 @@
-// module.exports = 
+module.exports = 
 function check(str, bracketsConfig) {
   const stack = [];
   let stackIsEmpty = true;
@@ -12,15 +12,14 @@ function check(str, bracketsConfig) {
         if (stack[stack.length - 1] === [...bracketsConfig.map(j=>j[0])]) {
           stack.pop();
         } else {
-          return console.log(false);
+          return false;
         }
       }
     }
-    return stack.length > 0 ? console.log(false) : console.log(true);
-  } return console.log(false);
+    return stack.length > 0 ? false : true;
+  } return false;
 };
 
-check('5555512575557777777555566667888888667661133833448441111222233333444442266666', [['1', '2'], ['3', '4'], ['5', '6'], ['7', '7'], ['8', '8']]);
 // console.log(!(5 % 2 | 0));
 // console.log('()[]{}'.length);
 
